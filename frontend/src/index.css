@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-color: var(--background-color-lg);
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+:root {
+  --background-color: #fff;
+  --background-color-lg: #fafafa;
+  --error-message-color: #f00;
+  --grey: #e6e4e4;
+  --grey-scrollbar-color: #ad8a8a;
+  --main-text-color: #fff;
+  --primary-color: #3b44f6;
+  --secondary-color: #3ec70b;
+  --secondary-text-color: #212529;
+  --tertiary-color: #a149fa;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
+}
+
+::-moz-selection {
+  background-color: var(--secondary-color);
+  color: var(--main-text-color);
+}
+
+.app {
+  display: flex;
+  height: 100%;
+}
+
+.desktop-nav-wrapper {
+  padding: 20px;
+  display: none;
+  width: 120px;
+}
+@media only screen and (min-width: 600px) {
+  .desktop-nav-wrapper {
+    display: block;
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 600px) {
+  main {
+    width: calc(100% - 120px);
+  }
+}
+
+#nav-for-desktop {
+  align-items: center;
+  background-color: var(--background-color);
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+#nav-for-desktop .icon {
+  font-size: 30px;
+}
+#nav-for-desktop .icon-wrapper {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+#nav-for-desktop .icon-wrapper:hover {
+  background-color: var(--grey);
+  cursor: pointer;
+}
+
+#nav-for-mobile {
+  align-items: center;
+  background-color: var(--primary-color);
+  bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding: 15px;
+  position: fixed;
+  right: 0;
+  transition: width 1s;
+  width: calc(100% - 40px);
+}
+@media only screen and (min-width: 600px) {
+  #nav-for-mobile {
+    display: none;
+  }
+}
+#nav-for-mobile.closed {
+  width: 60px;
+}
+#nav-for-mobile .icon {
+  color: var(--main-text-color);
+  font-size: 20px;
+  transition: all 0.5s;
+}
+#nav-for-mobile .icon.hide {
+  font-size: 0;
+}
+#nav-for-mobile .icon.show {
+  font-size: 20px;
+}
+
+.arrow-right.rotate {
+  animation: rotate 1s ease-in-out forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.arrow-right.rotate-back {
+  animation: rotate-back 1s ease-in-out forwards;
+}
+
+@keyframes rotate-back {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

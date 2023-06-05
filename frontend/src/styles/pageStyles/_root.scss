@@ -1,0 +1,24 @@
+.app {
+  display: flex;
+  height: 100%;
+}
+
+.desktop-nav-wrapper {
+  padding: 20px;
+  display: none;
+  width: 120px;
+
+  @include for-tablets {
+    display: block;
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  @include for-tablets {
+    width: calc(100% - 120px);
+  }
+}
