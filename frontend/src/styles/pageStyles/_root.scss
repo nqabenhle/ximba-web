@@ -4,8 +4,8 @@
 }
 
 .desktop-nav-wrapper {
-  padding: 20px;
   display: none;
+  padding: 20px;
   width: 120px;
 
   @include for-tablets {
@@ -15,8 +15,8 @@
 
 main {
   height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
 
   @include for-tablets {
     width: calc(100% - 120px);

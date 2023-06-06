@@ -1,3 +1,5 @@
+import { Outlet } from 'react-router-dom';
+
 import NavigationForDeskTop from '../features/navigation/navigationForDesktop';
 import NavigationForMobile from '../features/navigation/navigationForMobile';
 
@@ -8,7 +10,7 @@ const Root = () => {
         <NavigationForDeskTop />
       </div>
       <main>
-        This is the main page
+        <Outlet />
         <NavigationForMobile />
       </main>
     </div>

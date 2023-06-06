@@ -6,12 +6,16 @@ import { store } from './app/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
+import Home from './routes/home';
 import Root from './routes/root';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    children: [
+      { index: true, element: <Home /> }
+    ]
   }
 ])
 

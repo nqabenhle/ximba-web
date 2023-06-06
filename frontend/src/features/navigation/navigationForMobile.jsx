@@ -27,15 +27,15 @@ const Navigation = () => {
   return (
     <div id='nav-for-mobile' className={navOpened ? 'open' : 'closed'}>
       <div className='icon-wrapper' title='Home'>
-        <BsHouseDoor className={`icon show`} />
+        <BsHouseDoor className='icon show' />
       </div>
 
       <div className='icon-wrapper' title='New Event'>
-        <BsPlusSquare className={`icon show`} />
+        <BsPlusSquare className='icon show' />
       </div>
 
       <div className='icon-wrapper' title='Profile'>
-        <BsPerson className={`icon show`} />
+        <BsPerson className='icon show' />
       </div>
 
       <div
