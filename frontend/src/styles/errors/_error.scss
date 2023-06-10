@@ -1,0 +1,24 @@
+.error-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: $general-padding;
+
+  @include for-desktops {
+    flex-direction: row;
+  }
+
+  >div {
+    text-align: center;
+  }
+
+  img {
+    width: 80%;
+
+    @include for-desktops {
+      width: 45%;
+    }
+  }
+}

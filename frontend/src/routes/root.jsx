@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
+import Modal from '../features/modal/modal';
 import NavigationForDeskTop from '../features/navigation/navigationForDesktop';
 import NavigationForMobile from '../features/navigation/navigationForMobile';
 
@@ -13,6 +14,8 @@ const Root = () => {
         <Outlet />
         <NavigationForMobile />
       </main>
+
+      <Modal />
     </div>
   )
 }

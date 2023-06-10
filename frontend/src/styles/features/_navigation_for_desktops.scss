@@ -5,10 +5,11 @@
   border-radius: $border-radius;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - 40px);
   justify-content: space-between;
   padding: $general-padding;
-  width: 100%;
+  position: fixed;
+  // width: 100%;
 
   .icon {
     font-size: 30px;

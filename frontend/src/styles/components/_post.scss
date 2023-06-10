@@ -1,0 +1,117 @@
+.attend-event {
+  align-items: center;
+  display: flex;
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.cover {
+  max-height: 350px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .button-1 {
+    left: 20px;
+    position: absolute;
+    top: 10px;
+  }
+
+  .button-2 {
+    bottom: 10px;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+.description {
+  height: 140px;
+  overflow: hidden;
+  padding: $general-padding;
+  padding-bottom: 0;
+  position: relative;
+  transition: height 1s;
+
+  &.show {
+    height: 100%;
+  }
+
+  .text-cover {
+    align-items: flex-end;
+    background: linear-gradient(360deg, #FFFFFF 48.36%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 40px);
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.link {
+  color: var(--tertiary-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.post-buttons.buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  padding: $general-padding;
+}
+
+.post-extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  padding: $general-padding;
+  padding-top: 0;
+
+  .icon {
+    font-size: 14px;
+  }
+}
+
+.post-interactions {
+  padding: $general-padding;
+}
+
+.profile {
+  padding: $general-padding;
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.profile-image {
+  aspect-ratio: 1;
+  border-radius: $border-radius;
+  width: 60px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  div {
+    background-color: var(--bs-gray-400);
+    border-radius: $border-radius;
+    padding: 5px;
+  }
+}
