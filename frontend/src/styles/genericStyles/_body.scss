@@ -9,7 +9,6 @@ html, body {
 body {
   @include body;
   margin: 0;
-  padding-top: 20px;
   
   @include for-tablets {
     background-color: var(--background-color-lg);

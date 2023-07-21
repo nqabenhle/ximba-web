@@ -9,9 +9,6 @@ class User(AbstractUser):
   reset_password = models.TextField(max_length=20, blank=True, null=True)
   profile = models.OneToOneField('Profile', on_delete=models.CASCADE, related_name='user', null=True)
 
-  def __str__(self):
-    return self.username
-
 class Profile(models.Model):
   profile_img = models.ImageField(upload_to='ximba/static/ximba/images/profiles', default='/static/ximba/images/profiles/default.png')
   bio = models.TextField(max_length=200, blank=True, null=True)

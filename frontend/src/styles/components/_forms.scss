@@ -26,6 +26,8 @@
   }
 
   img {
+    width: 120px;
+    
     @include for-desktops {
       display: none;
     }
